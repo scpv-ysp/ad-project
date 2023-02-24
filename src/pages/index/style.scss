@@ -1,0 +1,57 @@
+.index-page {
+    .head-box {
+        width: 100%;
+        height: 100%;
+        border: 1px solid red;
+    }
+    .content-box {
+        width: 1220px;
+        margin: 0 auto;
+        background-color: lightblue;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-self: flex-start;
+        .left-content {
+            width: 900px;
+
+            .chart-area {
+                height: 437px;
+                border: 1px solid red;
+            }
+            .promotion-card-area {
+                height: 100px;
+                margin-top: 22px;
+                border: 1px solid red;
+            }
+            .product-card-area {
+                height: 420px;
+                margin-top: 22px;
+                border: 1px solid red;
+            }
+        }
+        .right-content {
+            width: 288px;
+            .account-area {
+                height: 267px;
+                border: 1px solid red;
+            }
+            .index-banner-area {
+                height: 148px;
+                border: 1px solid red;
+                margin-top: 20px;
+            }
+            .product-news-area {
+                margin-top: 20px;
+                height: 470px;
+                border: 1px solid red;
+            }
+        }
+    }
+    .footer-box {
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid red;
+    }
+}

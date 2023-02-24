@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 // const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const webpackConfigBase = require('./webpack.base.config');
-// const mockMiddleware = require('./mock.config');
+const mockMiddleware = require('./mock.config');
 
 const smp = new SpeedMeasurePlugin();
 
@@ -28,18 +28,18 @@ const webpackConfigDev = {
         // new ForkTsCheckerWebpackPlugin(),
     ],
     devtool: 'eval-source-map',
-    // devServer: {
-    //     contentBase: path.join(__dirname, '../src'),
-    //     historyApiFallback: false,
-    //     hot: false,
-    //     host: '0.0.0.0',
-    //     port: PORT,
-    //     before(app) {
-    //         const projectDir = path.resolve();
-    //         const mockDir = './mock';
-    //         app.use(mockMiddleware({ projectDir, mockDir }));
-    //     },
-    // },
+    devServer: {
+        contentBase: path.join(__dirname, '../src'),
+        historyApiFallback: false,
+        hot: false,
+        host: '0.0.0.0',
+        port: PORT,
+        before(app) {
+            const projectDir = path.resolve();
+            const mockDir = './mock';
+            app.use(mockMiddleware({ projectDir, mockDir }));
+        },
+    },
 };
 
 // module.exports = smp.wrap(merge(webpackConfigBase, webpackConfigDev));
