@@ -1,18 +1,22 @@
-import React, { Component } from "react";
+import React from 'react';
+import { Carousel } from 'antd';
 import './style.scss';
 
-interface IProps { }
-
-interface IStates { }
-
-class IndexBanner extends Component<IProps, IStates> {
-    state = {}
-    render(){
+class IndexBanner extends React.Component {
+    render() {
         return (
-            <div>
-                IndexBanner 组件
+            <div className="index-banner-component-box">
+                <Carousel autoplay>
+                    <div>
+                        <img src="assets/imgs/index-banner1.png" alt="" />
+                    </div>
+                    <div>
+                        <img src="assets/imgs/index-banner2.png" alt="" />
+                    </div>
+                </Carousel>
             </div>
-        )
+        );
     }
 }
+
 export default IndexBanner;

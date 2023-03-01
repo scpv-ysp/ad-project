@@ -80,7 +80,7 @@ export const MENU_INDEX_CONFIG = [
     {
         name: '首页',
         menuChildren: [],
-        isActive: true,
+        isActive: false,
         url: '/index',
     },
     {

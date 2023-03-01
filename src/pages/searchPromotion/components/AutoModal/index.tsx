@@ -6,11 +6,13 @@ interface IProps { }
 interface IStates { }
 
 class Account extends Component<IProps, IStates> {
-    state = {}
+    state = {
+
+    }
     render(){
         return (
             <div>
-                Account 组件
+                Account
             </div>
         )
     }
